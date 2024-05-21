@@ -1,5 +1,5 @@
 body {
-    background-color: #615656;
+    background-color: #000000;
     color: #fff;
     font-size: 15px;
 }
@@ -17,79 +17,54 @@ body {
     justify-content: center;
     display: flex;
     margin: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.3);
     opacity: 0.7;
     padding: 5px;
-    height: auto;
+    height: 8vh;
     box-shadow: 3px 5px 3px 0px;
-    padding: 3px 5px 7px;
+}
+
+.navbar input {
     display: none;
 }
-.navbar input{
-    display: none;
-}
+
 .menu {
-    padding: 6px 8px 94px 0px;
-    position: absolute;
-    right: 40px;
-    cursor: pointer;
+    display: none;
 }
-.close{
-    position: relative;
-    left: 344px;
-    top: 7px;
-    /* opacity: 0; */
+
+.close {
     display: none;
 }
 
 .navbar ul {
-    display: grid;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 41px;
-    margin-top: 55px;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    position: relative;
-    left: 0;
-    width: 100%;
-    display: none;
-} 
-.navbar ul li{
-    display: grid;
-    justify-content: space-around;
-    align-items: center;
-    width: 300px;
-    height: 6vh;
-    margin-top: 5px;
-    /* border: 2px solid white; */
-} 
-.navbar ul li:hover{
-    box-shadow: 5px 3px 3px 5px;
+    list-style: none;
+    /* margin: 30px; */
+    /* padding: 30px; */
 }
-.navbar ul li a{
-    color: aqua;
-    text-decoration: none;
-}
-/* .check:checked ~ .menuBar .menu {
-    opacity: 0;
-}
-.check:checked ~ .menuBar .close {
-    opacity: 1;
-}
-.check:checked ~ .menuBar ul {
-    display: flex; 
-}    */
 
+.navbar ul li {
+    display: inline;
+    margin: 0 22px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+ul li a:hover {
+    color: rgb(235, 90, 90);
+    font-size: 1.8rem;
+}
 
 .heading {
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: oblique;
-    font-size: 1.3rem;
-    font-weight: 1000;
+    font-size: 2.3rem;
+    font-weight: 900;
 }
 
 .subheading {
@@ -97,7 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -113,7 +88,7 @@ body {
     margin-top: 13px;
 }
 
-.subcontainer2 { 
+.subcontainer2 {
     width: 310px;
     height: auto;
     /* border: 2px solid rgb(204, 140, 140); */
@@ -121,7 +96,7 @@ body {
     border-radius: 8px;
     box-shadow: 2px 5px 6px;
     transition: 1s;
-    background-color: #000000;
+    background-color: #363232;
 }
 
 .subcontainer2 h2 {
@@ -231,7 +206,7 @@ body {
     margin: 18px 0px 9px 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -251,8 +226,8 @@ body {
     color: #fff;
     text-decoration: none;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     gap: 3px;
     transition: 1s;
 }
@@ -269,9 +244,10 @@ body {
 }
 
 .contact {
+    position: relative;
+    right: 26px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 12px;
     padding: 7px 36px 12px 13px;
 }
@@ -297,6 +273,7 @@ body {
 
 .follow h3 {
     font-weight: 300;
+    margin-right: 10px;
 }
 
 .follow a {
@@ -325,55 +302,103 @@ body {
     box-shadow: 0px 5px 6px;
 }
 
-@media (max-width:681px){
+@media (max-width:681px) {
     .heading {
         display: flex;
         align-items: center;
         justify-content: center;
         font-style: oblique;
-        font-size: 3rem;
-        font-weight: 900;
+        font-size: 1.3rem;
+        font-weight: 1000;
     }
+
     .subheading {
         display: flex;
         align-items: center;
         justify-content: center;
         color: black;
-        font-size: 1.3rem;
+        font-size: 0.8rem;
         margin-bottom: 15px;
     }
+
     .navbar {
         color: aliceblue;
         align-items: center;
         justify-content: center;
         display: flex;
         margin: 20px;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0, 0.3);
         opacity: 0.7;
         padding: 5px;
-        height: 8vh;
+        height: auto;
         box-shadow: 3px 5px 3px 0px;
-        /* display: none; */
+        padding: 3px 5px 7px;
     }
 
-    ul {
-        list-style: none;
-        margin: 30px;
-        padding: 30px;
+    .navbar input {
+        display: none;
     }
 
-    ul li {
-        display: inline;
-        margin: 0 22px;
+    .menu {
+        /* padding: 6px 8px 94px 0px; */
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+        display: block;
     }
 
-    ul li a {
+    /*
+/* .close { */
+    /* position: relative; */
+    /* left: 344px; */
+    /* top: 7px; */
+    /* display: none; */
+    /* } */
+
+    /* .navbar ul {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 41px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.navbar ul li {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 6vh;
+    margin-top: 5px;
+    /* border: 2px solid white; */
+
+    /*
+
+.navbar ul li:hover {
+    box-shadow: 5px 3px 3px 5px;
+}
+*/
+    .navbar ul li a {
+        color: aqua;
         text-decoration: none;
-        color: aliceblue;
+        display: none;
     }
 
-    ul li a:hover {
-        color: rgb(235, 90, 90);
-        font-size: 1.8rem;
-    }
+    /* .check:checked ~ .menuBar .menu {
+    opacity: 0;
+}
+.check:checked ~ .menuBar .close {
+    opacity: 1;
+}
+.check:checked ~ .menuBar ul {
+    display: flex; 
+}    */
+
 }
